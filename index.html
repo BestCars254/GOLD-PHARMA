@@ -5,122 +5,130 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Suplementos RafaCoach</title>
 <meta name="description" content="Os suplementos que o Rafa realmente usa e recomenda, com link direto da iHerb e da Amazon Japão. Cupom HWG0166 na iHerb.">
-<meta name="theme-color" content="#0a0f0e">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Suplementos RafaCoach">
 <meta property="og:description" content="Os suplementos que eu uso e recomendo. Pré-treino, EAA, creatina, proteína, ômega 3, magnésio e mais. Cupom HWG0166 na iHerb.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0f0e'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' font-family='Arial' font-weight='700' fill='%2314b8a6'%3ER%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4l24 14v28L32 60 8 46V18z' fill='%23fff' stroke='%23B8862B' stroke-width='4'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' font-family='Helvetica,Arial' font-weight='700' fill='%23B8862B'%3ER%3C/text%3E%3C/svg%3E">
 <style>
 :root{
-  --bg:#0a0f0e; --card:#141a18; --card-2:#18201d;
-  --line:rgba(255,255,255,.08); --line-strong:rgba(255,255,255,.16);
-  --accent:#14b8a6; --accent-bright:#2dd4bf; --accent-deep:#0f766e; --accent-rgb:20,184,166;
-  --ink:#eef5f3; --muted:#8fa8a1; --muted-dim:#647e77;
-  --iherb:#3fbf4a; --amazon:#ff9900;
-  --radius:20px;
-  --font-d:'Oswald',system-ui,sans-serif;
-  --font-b:'Manrope',system-ui,sans-serif;
+  --bg:#ffffff; --bg-grouped:#f7f5f0; --card:#ffffff; --card-2:#fbf9f4;
+  --line:rgba(60,60,67,.12); --line-strong:rgba(60,60,67,.22);
+  --gold:#b8862b; --gold-deep:#8f6618; --gold-bright:#d9ad4a; --gold-soft:#f3e9d2; --gold-rgb:184,134,43;
+  --ink:#1c1c1e; --muted:#6e6e73; --muted-dim:#8e8e93;
+  --iherb:#2e8b3a; --amazon:#c77300;
+  --radius:18px;
+  --shadow:0 1px 2px rgba(0,0,0,.04), 0 8px 24px -12px rgba(var(--gold-rgb),.25);
+  --font:-apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Hiragino Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#000000; --bg-grouped:#000000; --card:#1c1c1e; --card-2:#2c2c2e;
+    --line:rgba(84,84,88,.5); --line-strong:rgba(84,84,88,.8);
+    --gold:#d4a74a; --gold-deep:#b8862b; --gold-bright:#e8c472; --gold-soft:rgba(212,167,74,.14);
+    --ink:#f2f2f7; --muted:#a1a1a6; --muted-dim:#8e8e93;
+    --iherb:#4cc45a; --amazon:#ffa21f;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{
-  background:var(--bg); color:var(--ink); font-family:var(--font-b);
-  background-image:radial-gradient(120% 60% at 50% -8%, rgba(var(--accent-rgb),.18), rgba(var(--accent-rgb),0) 60%);
-  background-attachment:fixed; min-height:100dvh; line-height:1.45;
-}
+body{background:var(--bg-grouped); color:var(--ink); font-family:var(--font); min-height:100dvh; line-height:1.45; -webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:560px; margin:0 auto; padding:22px 16px 120px}
+.wrap{max-width:560px; margin:0 auto; padding:20px 16px 120px}
 
-/* header */
-.brand{display:flex; align-items:center; gap:10px; margin-bottom:22px}
-.brand .mark{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
-  background:linear-gradient(160deg,var(--accent-deep),var(--accent)); font-family:var(--font-d); font-weight:700; font-size:20px; color:#04211d;
-  box-shadow:0 8px 20px -8px rgba(var(--accent-rgb),.7)}
-.brand .name{font-family:var(--font-d); font-weight:700; letter-spacing:.14em; font-size:14px}
-.brand .name b{color:var(--accent-bright)}
-.hero h1{font-family:var(--font-d); font-weight:600; font-size:34px; line-height:1.05; letter-spacing:.01em}
-.hero h1 span{color:var(--accent-bright)}
-.hero p{color:var(--muted); font-size:14.5px; margin-top:10px; font-weight:500}
+/* header / brand */
+.brand{display:flex; align-items:center; gap:10px; margin-bottom:26px}
+.brand .mark{width:40px;height:40px;display:grid;place-items:center;position:relative; font-weight:800; font-size:18px; color:var(--gold-deep); letter-spacing:-.02em}
+.brand .mark::before{content:""; position:absolute; inset:0; background:linear-gradient(160deg,var(--gold-bright),var(--gold) 55%,var(--gold-deep));
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.brand .mark::after{content:""; position:absolute; inset:3px; background:var(--card);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.brand .mark span{position:relative; z-index:1}
+.brand .name{font-weight:700; letter-spacing:.18em; font-size:13px; color:var(--ink)}
+.brand .name b{color:var(--gold); font-weight:700}
+.hero h1{font-weight:700; font-size:34px; line-height:1.12; letter-spacing:-.022em}
+.hero h1 span{background:linear-gradient(100deg,var(--gold-deep),var(--gold),var(--gold-bright)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero p{color:var(--muted); font-size:17px; margin-top:10px; line-height:1.4}
+
+/* gold rule, like the packaging band */
+.band{height:6px; border-radius:3px; margin:18px 0 0; background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright) 50%,var(--gold-deep))}
 
 /* cupom */
-.coupon{margin-top:18px; border:1px solid rgba(var(--accent-rgb),.35); background:linear-gradient(160deg, rgba(var(--accent-rgb),.16), rgba(var(--accent-rgb),.05));
-  border-radius:var(--radius); padding:14px 16px; display:flex; align-items:center; gap:12px}
-.coupon .lbl{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700}
-.coupon .code{font-family:var(--font-d); font-size:26px; font-weight:700; letter-spacing:.08em; color:var(--accent-bright); line-height:1.1}
-.coupon .hint{font-size:12px; color:var(--muted); margin-top:2px}
-.coupon button{margin-left:auto; flex-shrink:0; border:0; border-radius:13px; padding:12px 16px; cursor:pointer;
-  background:linear-gradient(160deg,var(--accent-deep),var(--accent)); color:#04211d; font-family:var(--font-d); font-weight:600; font-size:15px; letter-spacing:.06em;
-  box-shadow:0 8px 20px -8px rgba(var(--accent-rgb),.6); transition:transform .12s}
-.coupon button:active{transform:scale(.96)}
+.coupon{margin-top:18px; border:1px solid var(--line); background:var(--card); border-radius:var(--radius); padding:16px; display:flex; align-items:center; gap:12px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+.coupon::before{content:""; position:absolute; left:0; top:0; bottom:0; width:5px; background:linear-gradient(180deg,var(--gold-bright),var(--gold-deep))}
+.coupon .lbl{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600}
+.coupon .code{font-size:28px; font-weight:800; letter-spacing:.06em; color:var(--gold); line-height:1.1; font-variant-numeric:tabular-nums}
+.coupon .hint{font-size:13px; color:var(--muted); margin-top:2px}
+.coupon button, .bar button, .cta{
+  background:linear-gradient(160deg,var(--gold-bright),var(--gold) 50%,var(--gold-deep)); color:#fff;
+  text-shadow:0 1px 1px rgba(0,0,0,.18); box-shadow:0 6px 16px -8px rgba(var(--gold-rgb),.7)}
+.coupon button{margin-left:auto; flex-shrink:0; border:0; border-radius:14px; padding:12px 18px; cursor:pointer; font-family:var(--font); font-weight:700; font-size:15px; letter-spacing:.02em; transition:transform .12s, opacity .12s}
+.coupon button:active, .bar button:active{transform:scale(.96); opacity:.9}
 
 /* seções */
-.section{margin-top:30px}
-.sec-head{display:flex; align-items:center; gap:10px; margin-bottom:12px}
-.sec-head h2{font-family:var(--font-d); font-weight:600; font-size:22px; letter-spacing:.02em}
-.sec-head .store{font-size:11px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:5px 9px; border-radius:999px; border:1px solid var(--line-strong)}
-.store.iherb{color:var(--iherb); border-color:rgba(63,191,74,.4); background:rgba(63,191,74,.08)}
-.store.amazon{color:var(--amazon); border-color:rgba(255,153,0,.4); background:rgba(255,153,0,.08)}
-.sec-note{color:var(--muted); font-size:13px; margin:-4px 0 14px}
+.section{margin-top:32px}
+.sec-head{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+.sec-head h2{font-weight:700; font-size:22px; letter-spacing:-.02em}
+.sec-head .store{font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:5px 10px; border-radius:999px; border:1px solid var(--line-strong)}
+.store.iherb{color:var(--iherb); border-color:rgba(46,139,58,.35); background:rgba(46,139,58,.08)}
+.store.amazon{color:var(--amazon); border-color:rgba(199,115,0,.35); background:rgba(199,115,0,.08)}
+.sec-note{color:var(--muted); font-size:15px; margin:0 0 14px}
 
-/* cards */
+/* cards (inset grouped style) */
 .grid{display:grid; gap:12px}
 .card{display:block; text-decoration:none; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px;
-  position:relative; overflow:hidden; transition:border-color .2s, transform .12s, background .2s}
+  position:relative; overflow:hidden; box-shadow:var(--shadow); transition:transform .12s, background .2s, border-color .2s}
 .card:active{transform:scale(.985); background:var(--card-2)}
-.card:hover{border-color:rgba(var(--accent-rgb),.5)}
-.card::after{content:""; position:absolute; inset:0; pointer-events:none;
-  background:radial-gradient(90% 60% at 100% 0%, rgba(var(--accent-rgb),.12), transparent 60%)}
+.card:hover{border-color:rgba(var(--gold-rgb),.45)}
+.card::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright) 50%,var(--gold-deep)); opacity:.9}
 .card .top{display:flex; gap:14px; align-items:flex-start}
-.card .ico{width:50px;height:50px;border-radius:15px;flex-shrink:0;display:grid;place-items:center;font-size:25px;
-  background:rgba(var(--accent-rgb),.12); border:1px solid rgba(var(--accent-rgb),.25)}
-.card .tag{font-size:10.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-bright); margin-bottom:3px}
-.card h3{font-family:var(--font-d); font-weight:600; font-size:19px; line-height:1.15; letter-spacing:.01em}
-.card .desc{color:var(--muted); font-size:13.5px; margin-top:5px; font-weight:500}
-.card .how{margin-top:12px; padding-top:11px; border-top:1px dashed var(--line-strong); font-size:12.5px; color:var(--muted-dim); display:flex; gap:7px; align-items:flex-start}
-.card .how b{color:var(--muted); font-weight:700}
-.card .cta{margin-top:12px; display:flex; align-items:center; justify-content:space-between;
-  border-radius:13px; padding:11px 14px; font-family:var(--font-d); font-weight:600; font-size:15px; letter-spacing:.05em; color:#04211d;
-  background:linear-gradient(160deg,var(--accent-deep),var(--accent)); box-shadow:0 8px 20px -8px rgba(var(--accent-rgb),.5)}
-.card .cta small{font-family:var(--font-b); font-weight:700; font-size:11px; letter-spacing:.06em; opacity:.8}
-.card .cta svg{width:18px;height:18px}
+.card .ico{width:52px;height:52px;border-radius:16px;flex-shrink:0;display:grid;place-items:center;font-size:25px;
+  background:var(--gold-soft); border:1px solid rgba(var(--gold-rgb),.25)}
+.card .tag{font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:3px}
+.card h3{font-weight:700; font-size:19px; line-height:1.2; letter-spacing:-.015em}
+.card .desc{color:var(--muted); font-size:15px; margin-top:5px; line-height:1.4}
+.card .how{margin-top:12px; padding-top:11px; border-top:1px solid var(--line); font-size:13.5px; color:var(--muted-dim); display:flex; gap:7px; align-items:flex-start; line-height:1.4}
+.card .how b{color:var(--muted); font-weight:600}
+.cta{margin-top:14px; margin-bottom:6px; display:flex; align-items:center; justify-content:space-between; border-radius:14px; padding:12px 16px; font-weight:700; font-size:16px; letter-spacing:.01em}
+.cta small{font-weight:600; font-size:12px; letter-spacing:.04em; opacity:.9}
+.cta svg{width:18px;height:18px}
 
-/* como usar */
-.tips{margin-top:34px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:18px 16px}
-.tips h2{font-family:var(--font-d); font-weight:600; font-size:20px; margin-bottom:10px}
-.tips ul{list-style:none; display:grid; gap:9px}
-.tips li{display:flex; gap:10px; font-size:13.5px; color:var(--muted); font-weight:500}
-.tips li::before{content:"✓"; color:var(--accent-bright); font-weight:800; flex-shrink:0}
-.tips li b{color:var(--ink)}
+/* dicas */
+.tips{margin-top:34px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:18px 16px; box-shadow:var(--shadow)}
+.tips h2{font-weight:700; font-size:20px; letter-spacing:-.02em; margin-bottom:10px}
+.tips ul{list-style:none; display:grid; gap:10px}
+.tips li{display:flex; gap:10px; font-size:15px; color:var(--muted); line-height:1.4}
+.tips li::before{content:"✓"; color:var(--gold); font-weight:800; flex-shrink:0}
+.tips li b{color:var(--ink); font-weight:600}
 
-footer{margin-top:30px; text-align:center; color:var(--muted-dim); font-size:12px; line-height:1.6}
-footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; color:var(--muted); font-size:13px}
+footer{margin-top:30px; text-align:center; color:var(--muted-dim); font-size:13px; line-height:1.6}
+footer .name{letter-spacing:.18em; font-weight:700; color:var(--gold); font-size:12px; margin-bottom:4px}
 
 /* barra fixa do cupom */
-.bar{position:fixed; left:0; right:0; bottom:0; padding:10px 16px calc(12px + env(safe-area-inset-bottom));
-  background:linear-gradient(rgba(10,15,14,0), var(--bg) 35%); pointer-events:none}
+.bar{position:fixed; left:0; right:0; bottom:0; padding:10px 16px calc(12px + env(safe-area-inset-bottom)); pointer-events:none}
 .bar .in{pointer-events:auto; max-width:560px; margin:0 auto; display:flex; align-items:center; gap:10px;
-  background:var(--card); border:1px solid rgba(var(--accent-rgb),.4); border-radius:16px; padding:10px 12px 10px 14px;
-  box-shadow:0 10px 30px -12px rgba(0,0,0,.8)}
+  background:color-mix(in srgb, var(--card) 85%, transparent); -webkit-backdrop-filter:saturate(180%) blur(20px); backdrop-filter:saturate(180%) blur(20px);
+  border:1px solid var(--line); border-radius:18px; padding:10px 12px 10px 14px; box-shadow:0 10px 30px -10px rgba(0,0,0,.25)}
 .bar .t{font-size:12px; color:var(--muted); font-weight:600; line-height:1.2}
-.bar .t b{display:block; font-family:var(--font-d); font-size:17px; letter-spacing:.08em; color:var(--accent-bright); font-weight:700}
-.bar button{margin-left:auto; border:0; border-radius:11px; padding:10px 14px; cursor:pointer; font-family:var(--font-d); font-weight:600; font-size:14px; letter-spacing:.06em;
-  background:linear-gradient(160deg,var(--accent-deep),var(--accent)); color:#04211d}
+.bar .t b{display:block; font-size:18px; letter-spacing:.06em; color:var(--gold); font-weight:800}
+.bar button{margin-left:auto; border:0; border-radius:12px; padding:10px 16px; cursor:pointer; font-family:var(--font); font-weight:700; font-size:14px}
 
-.toast{position:fixed; left:50%; bottom:92px; transform:translate(-50%,10px); background:var(--accent-bright); color:#04211d;
-  font-weight:800; font-size:13px; padding:10px 16px; border-radius:999px; opacity:0; transition:.25s; pointer-events:none; z-index:9}
+.toast{position:fixed; left:50%; bottom:92px; transform:translate(-50%,10px); background:var(--ink); color:var(--bg);
+  font-weight:600; font-size:14px; padding:10px 16px; border-radius:999px; opacity:0; transition:.25s; pointer-events:none; z-index:9}
 .toast.on{opacity:1; transform:translate(-50%,0)}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="brand"><div class="mark">R</div><div class="name">RAFA<b>COACH</b></div></div>
+  <div class="brand"><div class="mark"><span>R</span></div><div class="name">RAFA<b>COACH</b></div></div>
 
   <section class="hero">
     <h1>Os suplementos que eu <span>uso e recomendo</span></h1>
     <p>Sem lista gigante. Só o que faz diferença de verdade, com link direto pra comprar no Japão pela iHerb e pela Amazon.</p>
+
+    <div class="band"></div>
 
     <div class="coupon">
       <div>
@@ -128,14 +136,14 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
         <div class="code">HWG0166</div>
         <div class="hint">Cola no carrinho antes de fechar o pedido</div>
       </div>
-      <button type="button" data-copy="HWG0166">COPIAR</button>
+      <button type="button" data-copy="HWG0166">Copiar</button>
     </div>
   </section>
 
   <!-- iHerb -->
   <section class="section">
     <div class="sec-head"><h2>Na iHerb</h2><span class="store iherb">iHerb</span></div>
-    <p class="sec-note">Usa o cupom <b style="color:var(--accent-bright)">HWG0166</b> em todos esses.</p>
+    <p class="sec-note">Usa o cupom <b style="color:var(--gold)">HWG0166</b> em todos esses.</p>
     <div class="grid">
 
       <a class="card" href="https://iherb.co/CfapzGGk?rcode=HWG0166&utm_medium=appshare" target="_blank" rel="noopener">
@@ -145,7 +153,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">Energia e foco pra render mais nos dias de treino pesado.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> 20 a 30 min antes do treino. Não precisa todo dia, guarda pros treinos mais intensos.</span></div>
-        <div class="cta"><span>VER NA IHERB</span><span><small>CUPOM HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na iHerb</span><span><small>Cupom HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
       <a class="card" href="https://iherb.co/ExyiuFF4?rcode=HWG0166&utm_medium=appshare" target="_blank" rel="noopener">
@@ -155,7 +163,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">Mesmo pump e foco, sem atrapalhar o sono. Pra quem treina à noite ou é sensível à cafeína.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> 20 a 30 min antes do treino, qualquer horário do dia.</span></div>
-        <div class="cta"><span>VER NA IHERB</span><span><small>CUPOM HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na iHerb</span><span><small>Cupom HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
       <a class="card" href="https://iherb.co/3k94Eqpp?rcode=HWG0166&utm_medium=appshare" target="_blank" rel="noopener">
@@ -165,7 +173,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">Aminoácidos essenciais + eletrólitos pra segurar o treino inteiro e hidratar de verdade.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> dilui na garrafa e vai bebendo durante o treino.</span></div>
-        <div class="cta"><span>VER NA IHERB</span><span><small>CUPOM HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na iHerb</span><span><small>Cupom HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
       <a class="card" href="https://iherb.co/TMDuytaZ?rcode=HWG0166&utm_medium=appshare" target="_blank" rel="noopener">
@@ -175,7 +183,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">Magnésio que o corpo absorve de verdade. Sono mais profundo, menos câimbra e melhor recuperação.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> 30 a 60 min antes de dormir.</span></div>
-        <div class="cta"><span>VER NA IHERB</span><span><small>CUPOM HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na iHerb</span><span><small>Cupom HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
       <a class="card" href="https://iherb.co/QuRBzfQK?rcode=HWG0166&utm_medium=appshare" target="_blank" rel="noopener">
@@ -185,7 +193,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">Só amendoim. Sem açúcar, sem sal, sem óleo escondido. Encaixa em qualquer plano.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> na quantidade do seu plano. Pesa, porque é fácil passar da conta.</span></div>
-        <div class="cta"><span>VER NA IHERB</span><span><small>CUPOM HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na iHerb</span><span><small>Cupom HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
       <a class="card" href="https://iherb.co/5CkgwBMJ?rcode=HWG0166&utm_medium=appshare" target="_blank" rel="noopener">
@@ -195,7 +203,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">EPA e DHA na dose que faz efeito, não a versão aguada de supermercado.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> junto com uma refeição com gordura, todo dia.</span></div>
-        <div class="cta"><span>VER NA IHERB</span><span><small>CUPOM HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na iHerb</span><span><small>Cupom HWG0166</small> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
     </div>
@@ -214,7 +222,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">Cobre os micronutrientes que faltam na dieta, principalmente em fase de cutting.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> 1 dose no café da manhã, junto com a refeição.</span></div>
-        <div class="cta"><span>VER NA AMAZON</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na Amazon</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
       <a class="card" href="https://amzn.asia/d/01wcyJgZ" target="_blank" rel="noopener">
@@ -224,7 +232,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">Sabor chocolate branco com caramelo. Fecha a proteína do dia sem sofrimento.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> 1 dose quando faltar proteína no dia. Pós-treino ou em qualquer refeição.</span></div>
-        <div class="cta"><span>VER NA AMAZON</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na Amazon</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
       <a class="card" href="https://amzn.asia/d/07uTnFPM" target="_blank" rel="noopener">
@@ -234,7 +242,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
           <div class="desc">O suplemento mais estudado do mundo. Mais força, mais recuperação, mais massa magra.</div>
         </div></div>
         <div class="how">💡 <span><b>Como usar:</b> 3 a 5 g todo dia, inclusive nos dias sem treino. Não precisa de saturação.</span></div>
-        <div class="cta"><span>VER NA AMAZON</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+        <div class="cta"><span>Ver na Amazon</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
       </a>
 
     </div>
@@ -259,7 +267,7 @@ footer .name{font-family:var(--font-d); letter-spacing:.14em; font-weight:700; c
 
 <div class="bar"><div class="in">
   <div class="t">Cupom iHerb<b>HWG0166</b></div>
-  <button type="button" data-copy="HWG0166">COPIAR</button>
+  <button type="button" data-copy="HWG0166">Copiar</button>
 </div></div>
 <div class="toast" id="toast">Cupom copiado ✓</div>
 
