@@ -162,6 +162,33 @@ footer .name{letter-spacing:.18em; font-weight:700; color:var(--gold); font-size
 .sheet .how{margin-top:10px; padding:10px 12px; border-radius:12px; background:var(--gold-soft); font-size:14px; color:var(--ink); line-height:1.45}
 .sheet .how b{color:var(--gold-deep)}
 .sheet .cta{margin-top:14px; text-decoration:none}
+
+/* ===== avaliação rápida ===== */
+.quiz{margin-top:22px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:16px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+.quiz::before{content:""; position:absolute; left:0; right:0; top:0; height:5px; background:linear-gradient(90deg,var(--gold-deep),var(--gold-bright) 50%,var(--gold-deep))}
+.quiz .q-lbl{font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--gold)}
+.quiz h2{font-size:21px; font-weight:700; letter-spacing:-.02em; margin-top:2px}
+.quiz .q-sub{color:var(--muted); font-size:14.5px; margin-top:4px}
+.quiz .dots{display:flex; gap:6px; margin:12px 0 14px}
+.quiz .dots i{height:4px; flex:1; border-radius:2px; background:var(--line-strong)}
+.quiz .dots i.on{background:var(--gold)}
+.quiz .step{display:none} .quiz .step.on{display:block}
+.quiz .qq{font-size:17px; font-weight:700; letter-spacing:-.01em; margin-bottom:10px; line-height:1.3}
+.quiz .opts{display:grid; gap:8px}
+.quiz .opt{display:flex; align-items:center; gap:12px; text-align:left; width:100%; border:1px solid var(--line-strong); background:var(--card); border-radius:14px; padding:13px 14px; font-family:var(--font); font-size:15px; color:var(--ink); cursor:pointer; line-height:1.3; -webkit-tap-highlight-color:transparent; transition:border-color .15s, background .15s}
+.quiz .opt .em{font-size:20px; flex-shrink:0}
+.quiz .opt small{display:block; color:var(--muted); font-size:13px; font-weight:400; margin-top:2px}
+.quiz .opt:active, .quiz .opt.sel{border-color:var(--gold); background:var(--gold-soft)}
+.quiz .nav{display:flex; justify-content:space-between; margin-top:12px}
+.quiz .back{border:0; background:none; color:var(--muted); font-family:var(--font); font-size:14px; font-weight:600; cursor:pointer; padding:8px 0}
+.quiz .res-msg{font-size:15.5px; line-height:1.45; margin-bottom:12px}
+.quiz .res-msg b{color:var(--gold-deep)}
+.quiz .grid{margin-top:4px}
+.quiz .wa{display:flex; align-items:center; justify-content:center; gap:10px; margin-top:14px; text-decoration:none; border-radius:14px; padding:13px 16px; font-weight:700; font-size:16px; color:#fff; background:#25d366; box-shadow:0 6px 16px -8px rgba(37,211,102,.7)}
+.quiz .wa.alt{background:linear-gradient(160deg,var(--gold-bright),var(--gold) 50%,var(--gold-deep)); text-shadow:0 1px 1px rgba(0,0,0,.18)}
+.quiz .wa svg{width:20px;height:20px;flex-shrink:0}
+.quiz .again{display:block; margin:12px auto 0; border:0; background:none; color:var(--muted); font-family:var(--font); font-size:13.5px; font-weight:600; cursor:pointer}
+.quiz .priv{font-size:12px; color:var(--muted-dim); margin-top:12px; line-height:1.4}
 </style>
 </head>
 <body>
@@ -179,6 +206,52 @@ footer .name{letter-spacing:.18em; font-weight:700; color:var(--gold); font-size
         <div class="code">HWG0166</div>
       </div>
       <button type="button" data-copy="HWG0166">Copiar</button>
+    </div>
+  </section>
+
+
+  <!-- ===== Avaliação rápida ===== -->
+  <section class="quiz" id="quiz">
+    <div class="q-lbl">Avaliação rápida</div>
+    <h2>Me conta seu objetivo</h2>
+    <p class="q-sub">3 perguntas, 20 segundos. No final eu te mostro o que faz sentido pra você.</p>
+    <div class="dots"><i class="on"></i><i></i><i></i></div>
+
+    <div class="step on" data-step="1">
+      <div class="qq">Qual é o seu foco principal no momento?</div>
+      <div class="opts">
+        <button type="button" class="opt" data-k="goal" data-v="hipertrofia"><span class="em">💪</span><span>Hipertrofia máxima<small>Ganhar volume e força</small></span></button>
+        <button type="button" class="opt" data-k="goal" data-v="definicao"><span class="em">🔥</span><span>Definição<small>Secar mantendo massa muscular</small></span></button>
+        <button type="button" class="opt" data-k="goal" data-v="saude"><span class="em">🌿</span><span>Saúde, energia e disposição<small>Viver melhor e com mais energia</small></span></button>
+      </div>
+    </div>
+
+    <div class="step" data-step="2">
+      <div class="qq">Há quanto tempo você treina com consistência?</div>
+      <div class="opts">
+        <button type="button" class="opt" data-k="exp" data-v="menos de 1 ano"><span class="em">🌱</span><span>Menos de 1 ano</span></button>
+        <button type="button" class="opt" data-k="exp" data-v="1 a 3 anos"><span class="em">📈</span><span>De 1 a 3 anos</span></button>
+        <button type="button" class="opt" data-k="exp" data-v="3 a 5 anos"><span class="em">🧱</span><span>De 3 a 5 anos<small>Sinto que cheguei num platô</small></span></button>
+        <button type="button" class="opt" data-k="exp" data-v="mais de 5 anos"><span class="em">🏆</span><span>Mais de 5 anos<small>Sinto que cheguei num platô</small></span></button>
+      </div>
+      <div class="nav"><button type="button" class="back">← Voltar</button></div>
+    </div>
+
+    <div class="step" data-step="3">
+      <div class="qq">Como eu posso te ajudar agora?</div>
+      <div class="opts">
+        <button type="button" class="opt" data-k="path" data-v="suplementos"><span class="em">🧴</span><span>Quero a seleção de suplementos pro meu objetivo<small>Proteína, creatina, aminoácidos, pré-treino e saúde</small></span></button>
+        <button type="button" class="opt" data-k="path" data-v="duvidas"><span class="em">💬</span><span>Tenho outras dúvidas<small>Treino, dieta, acompanhamento ou qualquer coisa além de suplemento</small></span></button>
+      </div>
+      <div class="nav"><button type="button" class="back">← Voltar</button></div>
+    </div>
+
+    <div class="step" data-step="4">
+      <div class="res-msg" id="res-msg"></div>
+      <div class="grid" id="res-grid"></div>
+      <a class="wa" id="res-wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span id="res-wa-t">Falar com o Rafa no WhatsApp</span></a>
+      <button type="button" class="again">Refazer a avaliação</button>
+      <p class="priv">Suas respostas ficam só no seu celular. Nada é enviado nem guardado por mim; só vai pro WhatsApp o que você mesmo mandar.</p>
     </div>
   </section>
 
@@ -280,6 +353,7 @@ var STORE = {iherb:{label:"iHerb", cta:"Ver na iHerb", sub:"Cupom HWG0166"}, ama
       '<div class="row"><a class="buy" href="'+esc(p.url)+'" target="_blank" rel="noopener">Comprar</a>'+
       '<button type="button" class="info" aria-label="Detalhes">ⓘ</button></div></div></div>';
   }
+  window.__card=card;
   document.getElementById('grid-iherb').innerHTML = PRODUCTS.filter(function(p){return p.store==='iherb'}).map(card).join('');
   document.getElementById('grid-amazon').innerHTML = PRODUCTS.filter(function(p){return p.store==='amazon'}).map(card).join('');
 
@@ -314,6 +388,53 @@ var STORE = {iherb:{label:"iHerb", cta:"Ver na iHerb", sub:"Cupom HWG0166"}, ama
     try{document.execCommand('copy'); show('Cupom '+code+' copiado ✓');}catch(e){show('Cupom: '+code);} document.body.removeChild(i);}
   function copy(code){ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){show('Cupom '+code+' copiado ✓')},function(){fallback(code)});} else fallback(code); }
   document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){copy(b.getAttribute('data-copy'))});});
+})();
+
+/* ===== avaliação rápida ===== */
+(function(){
+  var WA_RAFA="818032833857";
+  var GOAL_LABEL={hipertrofia:"hipertrofia máxima", definicao:"definição mantendo massa", saude:"saúde, energia e disposição"};
+  var PICKS={
+    hipertrofia:["creatina","proteina","pre-treino-cafeina","eaa-eletrolitos","multivitaminico","pasta-amendoim"],
+    definicao:["proteina","creatina","eaa-eletrolitos","pre-treino-sem-cafeina","omega-3","magnesio"],
+    saude:["multivitaminico","omega-3","magnesio","creatina","proteina","pasta-amendoim"]
+  };
+  var INTRO={
+    hipertrofia:"Pra <b>ganhar volume</b> a base é creatina todo dia e proteína batendo a meta. O resto é apoio pra treinar mais forte e comer o suficiente.",
+    definicao:"Pra <b>secar mantendo massa</b> o foco é proteína alta e creatina pra segurar força. EAA ajuda no treino em déficit, e ômega 3 e magnésio cuidam da recuperação.",
+    saude:"Pra <b>saúde e energia</b> a prioridade é cobrir micronutrientes, ômega 3 e dormir melhor. Creatina e proteína entram como base pra manter músculo."
+  };
+  var PLATEAU={"3 a 5 anos":1,"mais de 5 anos":1};
+  var q=document.getElementById('quiz'), ans={}, step=1;
+  var steps=q.querySelectorAll('.step'), dots=q.querySelectorAll('.dots i');
+  function go(n){step=n; steps.forEach(function(s){s.classList.toggle('on', +s.getAttribute('data-step')===n)});
+    dots.forEach(function(d,i){d.classList.toggle('on', i<Math.min(n,3))});
+    if(n===4) result();
+    q.scrollIntoView({behavior:'smooth',block:'start'});}
+  q.addEventListener('click',function(e){
+    var o=e.target.closest('.opt');
+    if(o){ ans[o.getAttribute('data-k')]=o.getAttribute('data-v');
+      o.parentNode.querySelectorAll('.opt').forEach(function(x){x.classList.remove('sel')}); o.classList.add('sel');
+      setTimeout(function(){go(step+1)},160); return; }
+    if(e.target.closest('.back')){ go(step-1); return; }
+    if(e.target.closest('.again')){ ans={}; q.querySelectorAll('.opt').forEach(function(x){x.classList.remove('sel')}); go(1); }
+  });
+  function result(){
+    var g=ans.goal||'saude', msg=document.getElementById('res-msg'), grid=document.getElementById('res-grid'), wa=document.getElementById('res-wa'), wt=document.getElementById('res-wa-t');
+    var resumo="Objetivo: "+GOAL_LABEL[g]+". Treino há "+(ans.exp||"?")+".";
+    if(ans.path==='duvidas'){
+      msg.innerHTML="Fechado. Me chama no WhatsApp que eu respondo pessoalmente. Suas respostas já vão na mensagem pra eu te entender mais rápido."+(PLATEAU[ans.exp]?" <b>Platô depois de anos treinando</b> quase sempre é ajuste de treino, dieta e sono, e é exatamente isso que eu olho primeiro.":"");
+      grid.innerHTML='';
+      wt.textContent="Falar com o Rafa no WhatsApp"; wa.className="wa";
+      wa.href="https://wa.me/"+WA_RAFA+"?text="+encodeURIComponent("Olá Rafa! Fiz a avaliação rápida na sua página de suplementos. "+resumo+" Tenho algumas dúvidas além de suplemento e queria conversar.");
+    } else {
+      msg.innerHTML="<b>Perfeito!</b> Com base nas suas respostas, essa é a seleção ideal pro seu objetivo. "+INTRO[g]+(PLATEAU[ans.exp]?" Como você já treina há bastante tempo, suplemento sozinho não destrava platô: se quiser, me chama que a gente revisa treino e dieta.":"");
+      var list=PICKS[g].map(function(id){return PRODUCTS.filter(function(p){return p.id===id})[0]}).filter(Boolean);
+      grid.innerHTML=list.map(window.__card).join('');
+      wt.textContent="Tirar dúvidas com o Rafa"; wa.className="wa alt";
+      wa.href="https://wa.me/"+WA_RAFA+"?text="+encodeURIComponent("Olá Rafa! Fiz a avaliação rápida na sua página de suplementos. "+resumo+" Vi a seleção recomendada e queria tirar uma dúvida.");
+    }
+  }
 })();
 </script>
 </body>
